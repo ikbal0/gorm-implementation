@@ -2,7 +2,6 @@ package database
 
 import (
 	"fmt"
-	"gorm-implementation/entity"
 	"log"
 
 	"gorm.io/driver/postgres"
@@ -28,7 +27,7 @@ func StartDB() {
 		log.Fatal("error connecting to database:", err)
 	}
 
-	db.Debug().AutoMigrate(entity.User{}, entity.Product{})
+	// db.Debug().AutoMigrate(entity.User{}, entity.Product{})
 }
 
 func GetDB() *gorm.DB {
